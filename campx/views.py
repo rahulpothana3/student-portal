@@ -17,4 +17,17 @@ def submitform(request):
    # return JsonResponse(data)     
     return render(request, "form.html", data)
 
+def registerinfo(request):
+    if request.method=="POST":
+        data={
+            "fullname":request.POST.get("fullname"),
+            "email":request.POST.get("email"),
+            "studentid":request.POST.get("studentid"),
+            "department":request.POST.get("department"),
+            "password":request.POST.get("password"),
+            "confirmpassword":request.POST.get("confirmpassword"),
+
+        }
+    return render(request, 'signupinfo.html', data)
+
 # Create your views here.

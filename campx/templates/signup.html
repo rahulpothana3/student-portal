@@ -12,7 +12,8 @@
     <div class="register-container">
         <h2>Create Student Account</h2>
 
-        <form action="#" method="POST">
+        <form action="{% url 'registerinfo' %}" method="post">
+            {% csrf_token %}
 
             <div class="input-group">
                 <label>Full Name</label>

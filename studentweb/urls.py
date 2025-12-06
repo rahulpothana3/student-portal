@@ -16,12 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from campx.views import home,login ,signup,submitform
+from campx.views import home,login ,signup,submitform,registerinfo
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home, name='home'),
     path('login/',login, name='login'),
     path('signup/',signup, name='signup'),
-    path('submitform/', submitform, name='submitform')
+    path('submitform/', submitform, name='submitform'),
+    path('registerinfo/',registerinfo,name='registerinfo')
 ]
