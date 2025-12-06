@@ -1,0 +1,20 @@
+from django.shortcuts import render
+from django.http import JsonResponse
+
+def home(request):
+    return render(request, 'base.html')
+def login(request):
+    return render(request, 'login.html')
+def signup(request):
+    return render(request , 'signup.html')
+
+def submitform(request):
+    if request.method=="POST":
+        data={
+            "email":request.POST.get("email"),
+            "password":request.POST.get("password")
+        }
+   # return JsonResponse(data)     
+    return render(request, "form.html", data)
+
+# Create your views here.

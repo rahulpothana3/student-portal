@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="{% static 'campx/signup.css' %}">
+</head>
+
+<body>
+    <div class="register-container">
+        <h2>Create Student Account</h2>
+
+        <form action="#" method="POST">
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" name="fullname" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Student ID</label>
+                <input type="text" name="studentid" placeholder="Enter your student ID" required>
+            </div>
+
+            <div class="input-group">
+                <label>Department / Course</label>
+                <select name="department" required>
+                    <option value="">Select your department</option>
+                    <option>Computer Science</option>
+                    <option>Information Technology</option>
+                    <option>Electronics</option>
+                    <option>Mechanical Engineering</option>
+                    <option>Civil Engineering</option>
+                    <option>Commerce</option>
+                    <option>Arts</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Create a password" required>
+            </div>
+
+            <div class="input-group">
+                <label>Confirm Password</label>
+                <input type="password" name="confirmpassword" placeholder="Confirm your password" required>
+            </div>
+
+            <button type="submit" class="btn">Register</button>
+
+            <p class="login-link">
+                Already have an account? <a href="{% url 'login'%}">Login</a>
+            </p>
+<p class="login-link">
+                get the hell out of here!<a href="{%url 'home'%}">homepage</a>
+                </p>
+        </form>
+    </div>
+    
+</body>
+</html>

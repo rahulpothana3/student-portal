@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+    <link rel="stylesheet" href="{% static 'campx/style.css' %}">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="{% url 'login'%}">login</a></li>
+
+    </ul>
+</nav>
+<header>
+    <h1>POTHANA RAHUL</h1>
+</header>
+
+
+<img src="{% static 'campx/school.webp' %}" style="margin-left: auto;margin-right: auto;display: block;margin-top: 5%;">
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I am a student at vaagdevi engineering College pursuing btech on cse. I am passionate 
+       about technology, learning, and building meaningful projects.</p>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <ul>
+        <li><strong> vaagdevi engineering  College</strong> — btech in Computer Science (2023–2027)</li>
+        <li>Relevant coursework: Data Structures, Web Development, Algorithms</li>
+    </ul>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Communication</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+        <h3>medicine distribution platform</h3>
+        <p>A social-impact project that solves real problems.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:example@email.com">rahulpothana3@gmail.com</a></p>
+    <p>Linkedin: <a href="">mylinkdin</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2025 rahulpothana3</p>
+</footer>
+
+</body>
+</html>
